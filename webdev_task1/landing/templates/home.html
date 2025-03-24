@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Craft Technology - Internship</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #D3D3D3;
+            color: #333;
+            transition: background 0.5s ease;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            padding: 15px 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+        .brand {
+            font-size: 22px;
+            font-weight: bold;
+            margin-right: 30px;
+            color: #007BFF;
+        }
+        .nav-links {
+            display: flex;
+        }
+        .nav-links a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .container {
+            margin-top: 80px;
+            text-align: center;
+            padding: 30px;
+        }
+        h1 {
+            color: #222;
+        }
+    </style>
+</head>
+<body id="body">
+    <div class="navbar">
+        <div class="brand">Skill Craft Technology</div>
+        <div class="nav-links">
+            <a onclick="loadContent('home')">Home</a>
+            <a onclick="loadContent('about')">About</a>
+            <a onclick="loadContent('contact')">Contact</a>
+        </div>
+    </div>
+
+    <div class="container" id="content">
+        <h1>Welcome to Skill Craft Technology</h1>
+        <p>I am Web Development Intern .</p>
+    </div>
+
+    <script>
+        function loadContent(page) {
+            let content = document.getElementById("content");
+            let body = document.getElementById("body");
+
+            if (page === "home") {
+                content.innerHTML = `
+                    <h1>Welcome to Skill Craft Technology</h1>
+                    <p>At Skill Craft Technology, we focus on <b>innovation</b> and <b>professional growth</b>.</p>
+                    <p>Our internship program helps aspiring developers and tech enthusiasts to gain real-world experience.</p>
+                    <h3>What We Do?</h3>
+                    <ul>
+                        <p>Web Development (HTML, CSS, JavaScript, React.js)</p>
+                        <p>Software Development & Backend Engineering</p>
+                        <p>Cloud Computing (AWS, Azure)</p>
+                        <p>Cybersecurity & Ethical Hacking</p>
+                    </ul>`;
+                body.style.background = "#FFE4E1";
+            }
+            else if (page === "about") {
+                content.innerHTML = `
+                    <h1>About My Internship</h1>
+                    <p>I am currently an <b>intern</b> at <b>Skill Craft Technology</b>, where I work, enhance my skills in various technologies.</p>
+                    <h3>What I Have Learned So Far:</h3>
+                    <ul>
+                        <p>Building responsive web pages using HTML, CSS, and JavaScript</li>
+                        <p>Implementing frontend frameworks like React.js</li>
+                        <p>Backend development using Node.js and databases</li>
+                        <p>Understanding cloud computing & deployment</li>
+                    </ul>
+                    <h3>Why This Internship is Valuable?</h3>
+                    <p>This internship gives me hands-on experience, allowing me to:</p>
+                    <ul>
+                        <p>Collaborate with professionals</li>
+                        <p>Work on live projects</li>
+                        <p>Learn best coding practices</li>
+                        <p>Prepare for a future tech career</li>
+                    </ul>`;
+                body.style.background = "#F0FFF0"; // Light Green
+            }
+            else if (page === "contact") {
+    content.innerHTML = `
+        <h1>Contact Us</h1>
+        <p>Interested in joining our internship program? Get in touch with us!</p>
+        <h3>Email:</h3>
+        <p><a href="mailto:contact@skillcrafttech.com">contact@skillcrafttech.com</a></p>
+        <h3>Phone:</h3>
+        <p>+91 9878 229191</p>
+        <h3>Office Location:</h3>
+        <p>Mumbai, Maharashtra</p>
+        <h3>Follow Us:</h3>
+        <ul>
+            <p><a href="https://www.linkedin.com/company/skillcraft-technology" target="_blank">LinkedIn</a></li>
+            <p><a href="https://www.instagram.com/skillcrafttech" target="_blank">Instagram</a></li>
+        </ul>`;
+    body.style.background = "#F0F8FF"; // Light Coral
+}
+
+        }
+    </script>
+</body>
+</html>
